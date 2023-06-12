@@ -55,4 +55,39 @@ module.exports = {
       console.error(error);
     }
   },
+  async deleteFriend(req, res) {
+    try {
+        const user = await User.findOneAndUpdate(
+            { _id: req.params.userId },
+            { $pull: { friends: req.params.friendId }},
+            { runValidators: true, new: true },
+        );
+
+        if(!user) {
+            return res.status(404).json({ message: 'No user with that ID' });
+        };
+       
+        res.json(user);
+    } catch (error) {
+        return res.status(500).json(error);
+    }
+},
+async addFriend(req, res) {
+    try {
+        const user = await User.findOneAndUpdate(
+            { _id: req.params.userId },
+            { $addToSet: { friends: req.params.friendId }},
+            { runValidators: true, new: true }
+        );
+
+        if(!user) {
+            return res.status(404).json({ message: 'No user with that ID' });;
+        };
+
+        res.json(user);
+    } catch (error) {
+        console.log(error);
+        return res.status(500).json(error);
+    }
+}
 };

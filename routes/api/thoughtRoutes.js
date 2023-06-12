@@ -5,13 +5,16 @@ getThoughts,
 getSingleThought,
 createThought,
 addReaction,
-updateThough
+updateThough,
+deleteThought,
+deleteReaction
 } = require('../../controllers/thoughControllers')
 
 router.route('/').get(getThoughts).post(createThought)
 
 router.route('/:thoughtId/reactions').post(addReaction)
-router.route('/:thoughtId').put(updateThough).get(getSingleThought)
+router.route('/:thoughtId').put(updateThough).get(getSingleThought).delete(deleteThought)
+router.route('/:thoughtId/reactions/:reactionId').delete(deleteReaction);
 
 
 
