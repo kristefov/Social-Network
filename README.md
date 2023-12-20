@@ -30,7 +30,7 @@ For and suggestions or contributions you can reach me at my email address or you
 ## Questions
 * Reach me here on my GitHub account.
 
-    [kristiyantefov](https://github.com/kristiyantefov) 
+    [krisefov](https://github.com/kristefov) 
 
 * Reach me on my email address for additional questions.
 
@@ -39,7 +39,7 @@ For and suggestions or contributions you can reach me at my email address or you
 ## Link
 Link to repository:
 
-https://github.com/kristiyantefov/Social-Network
+https://github.com/kristefov/Social-Network
 
 Link to Video Tutorial:
 * click on the image to open the video tutorial
